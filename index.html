@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body {
+        font-family: 'Montserrat';
+        font-size: 40px;
+        text-align: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+
+    input[type='text'] {
+        border: none;
+        border-bottom: 2.25px solid #000000;
+        font-size: 40px;
+        font-family: 'Montserrat';
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    textarea {
+        border: none;
+        border: 1.25px solid #000000;
+        font-family: 'Montserrat';
+        font-size: 20px;
+    }
+
+    .formDiv {
+        display: flex;
+        justify-content: center;
+        padding-left: 170px;
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+
+    .logoFau {
+        font-weight: bold;
+        font-size: 30px;
+        
+    }
+    
+    .logo {
+        position: fixed;
+        height: 100%;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    }
+    
+    button {
+    	background-color: #000000;
+        color: #fff;
+        font-family: 'Montserrat';
+        cursor: pointer;
+       	font-size: 40px;
+       	padding: 5px;
+        border-radius: 17px;
+    }
+    
+    button:hover {
+    	color: #000000;
+        background-color: #fff;
+        transition: 0.3s;
+    }
+    
+   @media only screen and (min-width: 500px) and (max-width: 750px) {
+        p, label, input[type='text'], textarea, button {
+            font-size: 5vw;
+        }
+        
+        .formDiv {
+            padding-left: 23vw;
+        }
+        
+        textarea {
+            width: 40vw;
+        }
+        
+        .formQ {
+            padding-left: 30px;
+        }
+        
+        input[type='text'] {
+            width: 25vw;
+        }
+   }
+   
+   @media only screen and (max-width: 500px) {
+        .logo {
+            padding: 0;
+            background-color: transparent;
+            box-shadow: none;
+            height: auto;
+            position: static;
+        }
+        
+        .formDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 10px;
+            padding: 0;
+        }
+        
+        p, label, input[type='text'], textarea, button {
+            font-size: 5vw;
+        }
+        
+        textarea {
+            width: 40vw;
+        }
+        
+        input[type='text'] {
+            width: 25vw;
+        }
+   }
+</style>
+</head>
+<body>
+<div class="columnTime">
+    <div class="logo">
+        <i class="fa fa-paw" style="color: #fff; background-color: black; padding: 5px; border-radius: 17px; margin-top: 10px;"></i>
+        <div class="logoFau">Skookuri's</div>
+    </div>
+    <br>
+    <div class="formDiv">
+        <form onsubmit="validate()">
+            <div class="formQ">
+                <label for="name">Name?</label>
+                <input type="text" name="name" style="max-width: 200px;"></input>
+            </div>
+            <br><br>
+            <div class="formQ">
+                <p>I create websites for businesses. What kind of business do you offer?</p>
+                <input type="text" name="business"></input>
+            </div>
+            <br><br>
+            <div class="formQ">
+                <p>What kind of design preferences do you have? Do you have any example websites you want your website to look similar to? Color palette ideas?</p>
+                <br>
+                <textarea name="design" rows="4" cols="50"></textarea>
+            </div>
+            <div class="formQ">
+            	<button>Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
